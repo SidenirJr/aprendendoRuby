@@ -1,0 +1,11 @@
+# Banco de dados
+*.db
+*.sqlite
+*.sqlite3
+
+# Gems
+vendor/
+.bundle/
+
+# Logs
+*.log
