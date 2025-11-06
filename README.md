@@ -79,12 +79,34 @@ Bem-vindo ao guia completo de Ruby! Este repositório contém material didático
     - Code smells a evitar
     - Gems úteis
 
+## 🛍️ Projeto Prático - CRUD API RESTful
+
+**[crudexample/](crudexample/)** - API RESTful completa com Ruby, Sinatra e SQLite
+
+Um exemplo real de CRUD (Create, Read, Update, Delete) implementando:
+- ✅ API RESTful com Sinatra
+- ✅ Banco de dados SQLite3
+- ✅ Model com validações
+- ✅ Todas as operações CRUD
+- ✅ Busca de produtos
+- ✅ Documentação completa
+- ✅ Scripts de teste
+
+```bash
+cd crudexample
+bundle install
+ruby app.rb
+```
+
+Ver documentação completa: **[crudexample/README.md](crudexample/README.md)**
+
 ## 🎯 Como Usar Este Material
 
 1. **Siga a ordem**: Os tópicos estão organizados em ordem progressiva de dificuldade
 2. **Pratique**: Cada arquivo contém exemplos práticos. Execute-os!
 3. **Experimente**: Modifique os exemplos e veja o que acontece
 4. **Pasta exemplos/**: Contém scripts completos para praticar
+5. **Projeto CRUD**: Aplique tudo que aprendeu no projeto prático
 
 ## 🚀 Executando os Exemplos
 

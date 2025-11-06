@@ -1,0 +1,85 @@
+### API de Produtos - Exemplos de Requisições HTTP
+### Use com extensões REST Client no VS Code ou similar
+
+@baseUrl = http://localhost:4567
+
+### 1. Informações da API
+GET {{baseUrl}}/
+
+### 2. Resetar banco de dados (desenvolvimento)
+POST {{baseUrl}}/reset
+
+### 3. Listar todos os produtos
+GET {{baseUrl}}/products
+
+### 4. Buscar produto específico
+GET {{baseUrl}}/products/1
+
+### 5. Buscar produto que não existe
+GET {{baseUrl}}/products/99999
+
+### 6. Criar novo produto
+POST {{baseUrl}}/products
+Content-Type: application/json
+
+{
+  "name": "Mouse Gamer",
+  "description": "Mouse RGB 16000 DPI",
+  "price": 189.90,
+  "quantity": 30
+}
+
+### 7. Criar produto inválido (sem nome)
+POST {{baseUrl}}/products
+Content-Type: application/json
+
+{
+  "price": 50.00,
+  "quantity": 10
+}
+
+### 8. Criar produto inválido (preço negativo)
+POST {{baseUrl}}/products
+Content-Type: application/json
+
+{
+  "name": "Produto Teste",
+  "price": -10.00,
+  "quantity": 5
+}
+
+### 9. Atualizar produto
+PUT {{baseUrl}}/products/1
+Content-Type: application/json
+
+{
+  "name": "Notebook Dell Atualizado",
+  "price": 3200.00,
+  "quantity": 15
+}
+
+### 10. Atualizar apenas preço
+PUT {{baseUrl}}/products/2
+Content-Type: application/json
+
+{
+  "price": 79.90
+}
+
+### 11. Buscar produtos
+GET {{baseUrl}}/search?q=notebook
+
+### 12. Buscar produtos (outro termo)
+GET {{baseUrl}}/search?q=mouse
+
+### 13. Buscar sem query (erro)
+GET {{baseUrl}}/search
+
+### 14. Deletar produto
+DELETE {{baseUrl}}/products/3
+
+### 15. Deletar produto que não existe
+DELETE {{baseUrl}}/products/99999
+
+### 16. Endpoint não existente (404)
+GET {{baseUrl}}/produtos-inexistentes
